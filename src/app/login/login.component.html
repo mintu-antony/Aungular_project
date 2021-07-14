@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Form</title>
+    <style type="text/css">
+        .main {
+            border: 5px;
+            background-color: rgb(159, 192, 201);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="main">
+
+        <table>
+            <tr>
+                <td>Enter User Name :</td>
+                <td><input type="text" placeholder="Enter user name" id="email" name="email"
+                        [(ngModel)]="username"></td>
+            </tr>
+            <tr>
+                <td>Enter Password :</td>
+                <td><input type="text" placeholder="Enter Password " id="pwd1" name="pwd"
+                        [(ngModel)]="pwd1"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Reset" (click)="clear()" />
+                    <input type="submit" value="Login" (click)="onClickMe()" />
+                </td>
+            </tr>
+        </table>
+        <div *ngIf="username; then yesusername else noUsername">
+            <!-- <label>Entered username is : {{username}}</label> -->
+        </div>
+
+        <!-- <div *ngIf="!username">
+            <label>No Username</label>
+        </div> -->
+        <ng-template #yesusername>Entered username is : {{username}}</ng-template>
+
+        <ng-template #noUsername> No Username</ng-template>
+
+    <!-- <ul>
+        <li *ngFor = "let users of usernameList">{{users.username}}
+
+        </li>
+    </ul> -->
+
+
+        <p>Username is: {{username}}</p>
+
+    </div>
+
+
+
+</body>
+
+</html>

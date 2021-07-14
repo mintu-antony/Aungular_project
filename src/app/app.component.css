@@ -1,0 +1,20 @@
+h1 {
+    color: rgb(63, 63, 128);
+  }
+
+  p {
+    color: rgb(185, 32, 32);
+  }
+  .login {
+    background-color: rgb(187, 78, 151);
+    color: rgb(216, 213, 228);
+    border: 2px solid #1f221f;
+    margin:1%;
+  }
+  .home {
+    background-color: rgb(187, 178, 93);
+    color: rgb(216, 213, 228);
+    border: 2px solid #1f221f;
+    margin:1%;
+
+  }
